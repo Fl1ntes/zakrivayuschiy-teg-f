@@ -3,6 +3,10 @@
 --decorative-font: "PressStart2P";
 --text-wght: 410;
 --title-wght: 710;
+--button-text-color: #fff;
+--accent-color: #000;
+--heart-contour-color: black;
+--animation-fill-color: #FF0000;
 
 --bg-gradient: repeating-linear-gradient(to right, #d3d3d3 2px, transparent 4px), 
                repeating-linear-gradient(to bottom, #d3d3d3 2px, transparent 4px),
