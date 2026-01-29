@@ -66,10 +66,12 @@
 }
 
 .main-body {
+  fill: transparent;
   transition: fill linear 0.3s;
 }
 
 .core {
+  fill: transparent;
   transition: fill linear 0.3s 0.03s;
 }
 

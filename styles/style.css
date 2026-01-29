@@ -17,6 +17,7 @@
   font-size: 18px;
   background-image: var(--bg-gradient);
   background-size: cover;
+  background-attachment: fixed;
   font-variation-settings: "wght" var(--text-wght);
 }
 
@@ -29,11 +30,9 @@
   margin: 100px auto;
   border: 2px solid #000;
   padding-block: clamp(122px, 0.75vw + 119.18px, 130px);
-  font-family: var(--decorative-font), sans-serif;
+  font-family: var(--decorative-font), fantasy;
   text-transform: uppercase;
   background-color: #fff;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 .header__logo {
@@ -80,16 +79,22 @@
   top: 25px;
   right: 25px;
   opacity: 50%;
-  font-family: var(--decorative-font), sans-serif;
+  font-family: var(--decorative-font), fantasy;
   font-size: 14px;
   text-transform: uppercase;
+  text-shadow:
+    -1px 0 #fff,
+    0 1px #fff,
+    1px 0 #fff,
+    0 -1px #fff;
   mix-blend-mode: hard-light;
-  -webkit-text-stroke: 0.5px #fff;
 }
 
-@supports (text-stroke: 1px #fff) {
+@supports (text-stroke: 0.5px #fff) or (-webkit-text-stroke: 0.5px #fff) {
   .label {
-    text-stroke: 1px #fff;
+    text-shadow: none;
+    text-stroke: 0.5px #fff;
+    -webkit-text-stroke: 0.5px #fff;
   }
 }
 
@@ -128,7 +133,7 @@
 .button {
   position: relative;
   border: 2px solid var(--accent-color);
-  font-family: var(--decorative-font), sans-serif;
+  font-family: var(--decorative-font), fantasy;
   font-size: 14px;
   line-height: 90%;
   background-color: #fff;
@@ -183,7 +188,7 @@
   gap: 8px;
   inline-size: clamp(306px, 295.7887px + 2.723vw, 335px);
   block-size: 55px;
-  margin-bottom: 100px;
+  margin-block-end: 100px;
 }
 
 .card__save-button svg {
@@ -206,7 +211,7 @@
 
 .dialog__text {
   max-inline-size: 234px;
-  font-family: var(--decorative-font), sans-serif;
+  font-family: var(--decorative-font), fantasy;
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
@@ -219,33 +224,34 @@
   align-items: center;
   inline-size: 100%;
   block-size: 38px;
+  text-transform: uppercase;
 }
 
-.filter1 {
+.color-filter {
   filter: hue-rotate(290deg);
 }
 
-.filter2 {
+.contrast-filter {
   filter: contrast(110);
 }
 
-.filter3 {
+.opacity-filter {
   filter: opacity(0.8);
 }
 
-.filter4 {
+.invert-filter {
   filter: invert(1);
 }
 
-.filter5 {
+.grayscale-filter {
   filter: grayscale(0.8);
 }
 
-.filter6 {
+.blur-filter {
   filter: blur(9px);
 }
 
-.filter7 {
+.combined-filter {
   filter: blur(3px) hue-rotate(80deg) contrast(50%);
 }
 
