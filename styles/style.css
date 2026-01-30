@@ -90,11 +90,11 @@
   mix-blend-mode: hard-light;
 }
 
-@supports (text-stroke: 0.5px #fff) or (-webkit-text-stroke: 0.5px #fff) {
+@supports (text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff) {
   .label {
     text-shadow: none;
-    text-stroke: 0.5px #fff;
-    -webkit-text-stroke: 0.5px #fff;
+    text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px #fff;
   }
 }
 
